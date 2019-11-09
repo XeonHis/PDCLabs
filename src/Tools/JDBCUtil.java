@@ -45,6 +45,7 @@ public class JDBCUtil
 			//2. 建立连接
 			conn = DriverManager.getConnection(
 					url, name, password);
+			System.out.println("Connection established!");
 		} catch (ClassNotFoundException | SQLException e)
 		{
 			e.printStackTrace();

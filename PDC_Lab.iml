@@ -7,5 +7,26 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/build/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/demo/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/generated/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/legacy/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/main/core-api/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/main/core-impl/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/main/protocol-impl/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/main/user-api/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/main/user-impl/java" />
+          <root url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17/src/test/java" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/developer/mysql-connector-java-8.0.17" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

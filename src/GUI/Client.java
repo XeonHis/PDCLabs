@@ -63,8 +63,8 @@ public class Client
 			answerNum = rs.getInt("answerNum");
 		}
 		JDBCUtil.release(conn, ps, rs);
-//		System.out.println("id = " + id + "\nquestion = " + question + "\nanswer = " + answer +
-//				"\ntype = " + type + "\nanswerNum = " + answerNum);
+		System.out.println("id = " + id + "\nquestion = " + question + "\nanswer = " + answer +
+				"\ntype = " + type + "\nanswerNum = " + answerNum);
 
 		questionArea.setText(question);
 		for (int i = 0; i < answerNum; i++)

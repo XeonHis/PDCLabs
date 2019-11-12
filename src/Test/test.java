@@ -2,10 +2,10 @@ package Test;
 
 import Tools.JDBCUtil;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.sql.*;
 
 /**
  * @author paulalan
@@ -13,8 +13,11 @@ import java.sql.Statement;
  */
 public class test
 {
-	public static void main(String[] args) throws SQLException
+	public static void main(String[] args) throws  IOException
 	{
-		System.out.println((int)(Math.random()*8));
+		Socket socket=new Socket("localhost", 11111);
+		BufferedOutputStream bos=new BufferedOutputStream(socket.getOutputStream());
+		bos.write("Connection established".getBytes());
+		bos.close();
 	}
 }

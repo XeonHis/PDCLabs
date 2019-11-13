@@ -1,9 +1,11 @@
 package Test;
 
 import Tools.JDBCUtil;
+import Tools.Question;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.sql.*;
 
@@ -13,11 +15,13 @@ import java.sql.*;
  */
 public class test
 {
-	public static void main(String[] args) throws  IOException
+	public static void main(String[] args) throws IOException, ClassNotFoundException
 	{
-		Socket socket=new Socket("localhost", 11111);
-		BufferedOutputStream bos=new BufferedOutputStream(socket.getOutputStream());
-		bos.write("Connection established".getBytes());
-		bos.close();
+		Socket socket = new Socket("localhost", 11111);
+		ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+		Question question = (Question) ois.readObject();
+		System.out.println("id = " + question.getId() + "\nquestion = " + question.getQuestion() +
+				"\nanswer = " + question.getAnswer() + "\ntype = " + question.getType() +
+				"\nanswerNum = " + question.getAnswerNum());
 	}
 }
